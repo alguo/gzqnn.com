@@ -1,0 +1,26 @@
+---
+layout: pages
+permalink: /products/
+title: 产品中心
+type-en: Products
+---
+			<div class="pcontent">
+			    <a name="b"></a>
+				<h3>全能金库</h3>
+				<div class="prodsublist">
+				{% for post in site.categories["b"] %}
+					<div class="psli"><a href="{{ site.url }}/{{ post.url }}"><img class="lazy" src="{{ site.url }}/images/products/{{ post.img }}.jpg" />{{ post.name }}</a></div>
+					<div class="clear"></div>
+				{% endfor %}
+				</div>
+				<div class="clear"></div>
+			    <a name="bw"></a>
+				<h3>风生水起</h3>
+				<div class="prodsublist">
+				{% for post in site.categories["bw"] %}
+					<div class="psli"><a href="{{ site.url }}/{{ post.url }}"><img class="lazy" src="{{ site.url }}/images/products/{{ post.img }}.jpg" />{{ post.name }}</a></div>
+					<div class="clear"></div>
+				{% endfor %}
+				</div>
+				<div class="clear"></div>
+			</div>
