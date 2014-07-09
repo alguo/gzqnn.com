@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="viewport" content="width=1024" />
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+{% stylesheet application %}
+{% javascript application %}
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo"><a class="logo" href="/">全能保险柜</a><h2>{{ site.name }}</h2></div>
+		<div id="telephone">全能保险柜总部：400-830-4555</div>
+		<div id="telephones">{{ site.name }}：{{ site.telephone }}</div>
+		<div id="menucontainer">
+			<div id="menu">
+				<ul>
+				  <li><a{% if page.url == '/index.html' %} class="current"{% endif %} href="/">首页</a></li>
+				  <li><a{% if page.url contains '/about/' %} class="current"{% endif %} href="/about/">全能简介</a></li>
+				  <li><a{% if page.url contains '/find/' %} class="current"{% endif %} href="/find/">产品导购</a></li>
+				  <li><a{% if page.url contains '/products/' %} class="current"{% endif %} href="/products/">产品中心</a></li>
+				  <li><a{% if page.url contains '/stores/' %} class="current"{% endif %} href="/stores/">专卖店风采</a></li>
+				  <li><a{% if page.url contains '/factory/' %} class="current"{% endif %} href="/factory/">总部工厂实景</a></li>
+				  <li><a{% if page.url contains '/services/' %} class="current"{% endif %} href="/services/">服务中心</a></li>
+				  <li><a{% if page.url contains '/contact/' %} class="current"{% endif %} href="/contact/">联系我们</a></li>
+				  <li class="end"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{{ content }}
+	<div id="footer">
+		<div class="copy">&copy; 1999-2014 全能保险柜{{ site.name }} <a href="http://www.miibeian.gov.cn/" target="_blank">{{ site.beian }}</a> <a href="/Sitemap.xml" target="_blank">Sitemap</a></div>
+		<div class="creator">网站建设维护与优化：<a href="http://www.osw.cc" target="_blank">OSW</a></div>
+	</div>
+</div>
+<div class="zxkf">
+	<div class="zxkfbtn"></div>
+	<div class="zxkfpanel">
+		<div class="zxkfpanel_h"></div>
+		<div class="zxkfpanel_c">
+			<div class="zxkfpanel_c_2">
+        <p>客户咨询时间：早上8:00到下午17:30</p>
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq1 }}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{{ site.qq1 }}:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={{ site.qq2 }}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{{ site.qq2 }}:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+			</div>
+		</div>
+		<div class="zxkfpanel_f"></div>
+	</div>
+</div>
+</body>
+</html>
